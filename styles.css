@@ -115,9 +115,16 @@ video:not([src*="youtube.com"]) {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Adds a white glow effect */
 }
 
+/* Your existing CSS styles for the logo class */
+.movie-logo, .game-logo {
+    max-width: 100%;
+    height: auto;
+}
+
 /* Add a media query for screens with a maximum width of 768px (adjust the value as needed) */
 @media (max-width: 768px) {
-    .movie-logo {
+    .movie-logo, .game-logo {
         max-width: 50%; /* Adjust the percentage as needed */
     }
 }
+
