@@ -48,20 +48,43 @@ h2 {
     text-align: center;
 }
 
-/* Add CSS styles for movie, game, and logo-video elements */
-.movie-grid, .game-grid {
+/* Add CSS styles for movie logos */
+.movie-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.movie, .game, .logo-video {
+.movie {
     margin: 10px;
     max-width: 150px;
     text-align: center;
 }
 
-.movie img, .game img, .logo-video {
+.movie img {
     max-width: 100%;
     height: auto;
+}
+
+/* Add CSS styles for game logos */
+.game-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.game {
+    margin: 10px;
+    max-width: 150px;
+    text-align: center;
+}
+
+.game img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Add CSS styles for video elements */
+.video {
+    max-width: 100%;
 }
