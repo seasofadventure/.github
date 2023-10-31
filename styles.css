@@ -14,7 +14,7 @@ header {
 
 h1 {
     font-size: 36px;
-    text-align: center; /* Center the h1 element */
+    text-align: center;
 }
 
 nav {
@@ -46,7 +46,7 @@ section {
 
 h2 {
     font-size: 24px;
-    text-align: center; /* Center the h2 elements */
+    text-align: center;
 }
 
 /* Add CSS styles for movie and game logos */
@@ -69,10 +69,24 @@ h2 {
     text-align: center;
 }
 
-img {
-    max-width: 100%;
+/* Add CSS styles for download button */
+.download-button {
+    display: inline-block;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px; /* Adds rounding to the button */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-video {
+.download-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Adds an animation on hover */
+}
+
+/* Add CSS styles for video iframe */
+iframe {
     max-width: 100%;
 }
