@@ -61,7 +61,7 @@ h2 {
     text-align: center;
 }
 
-.movie img, .game img {
+.movie img, .game img, .logo-video {
     max-width: 100%;
     height: auto;
 }
