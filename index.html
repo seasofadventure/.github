@@ -1,58 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap">
-    <title>Seas Of Adventure</title>
-</head>
-<body>
-    <header>
-        <h1>Seas of Adventure</h1>
-    </header>
+/* Use the Pirata One font */
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Pirata One', sans-serif; /* Apply the Pirata One font */
+    margin: 0;
+    padding: 0;
+}
 
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#movies">Movies</a></li>
-            <li><a href="#games">Games</a></li>
-        </ul>
-    </nav>
+header {
+    background-color: #000;
+    text-align: center;
+    padding: 20px;
+}
 
-    <section id="movies">
-        <h2>Movies</h2>
-        <div class="movie-grid">
-            <!-- The Nightmare Before Christmas -->
-            <div class="movie">
-                <a href="movies/NightmareBeforeChristmas.html">
-                    <img src="https://m.media-amazon.com/images/M/MV5BNWE4OTNiM2ItMjY4Ni00ZTViLWFiZmEtZGEyNGY2ZmNlMzIyXkEyXkFqcGdeQXVyMDU5NDcxNw@@._V1_.jpg" alt="The Nightmare Before Christmas">
-                </a>
-                <h3>The Nightmare Before Christmas</h3>
-            </div>
+h1 {
+    font-size: 36px;
+    text-align: center;
+}
 
-            <!-- Five Nights at Freddy's -->
-            <div class="movie">
-                <a href="movies/FNAF.html">
-                    <img src="https://i.ibb.co/YPKhGT4/s-l1200.webp" alt="Five Nights at Freddy's">
-                </a>
-                <h3>Five Nights at Freddy's</h3>
-            </div>
-        </div>
-    </section>
+nav {
+    background-color: #000;
+    padding: 10px;
+    text-align: center;
+}
 
-    <section id="games">
-        <h2>Games</h2>
-        <div class="game-grid">
-            <!-- Hollow Knight -->
-            <div class="game">
-                <a href="games/HollowKnight.html">
-                    <img src="https://i.ibb.co/gw3Xk6D/HK-first-cover-art.png" alt="Hollow Knight">
-                </a>
-                <h3>Hollow Knight</h3>
-            </div>
-            <!-- Add more games here as needed -->
-        </div>
-    </section>
-</body>
-</html>
+nav ul {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 15px; /* Adjust the margin as needed */
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    text-align: center;
+}
+
+/* Add CSS styles for movie and game logos */
+.movie-logo, .game-logo {
+    max-width: 200px; /* Adjust the max-width as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.movie-grid, .game-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie, .game {
+    margin: 10px;
+    max-width: 150px; /* Adjust the max-width as needed */
+    text-align: center;
+}
+
+/* Add CSS styles for video iframe */
+iframe {
+    max-width: 100%;
+}
+
+/* Your existing CSS styles here */
