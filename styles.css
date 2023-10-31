@@ -89,7 +89,7 @@ video {
 
 /* Add CSS styles for logo-video elements */
 .logo-video {
-    max-width: 100%;
+    max-width: 75%;
     text-align: center;
     display: inline-block; /* Keep elements on the same line */
 }
