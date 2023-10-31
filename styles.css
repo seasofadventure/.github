@@ -121,3 +121,14 @@ video:not([src*="youtube.com"]) {
     height: auto;
 }
 
+/* Style for the blue download button */
+.blue-download-button {
+    background-color: #0074cc; /* Blue background color */
+    color: #fff; /* White text color */
+    padding: 10px 20px; /* Padding for the button */
+    border: none; /* Remove button border */
+    text-decoration: none; /* Remove underline on the link */
+    font-size: 18px; /* Adjust the font size as needed */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Add a pointer cursor on hover */
+}
