@@ -96,6 +96,6 @@ video {
 
 /* Ensure videos are responsive within their sections */
 video {
-    max-width: 100%;
+    max-width: 75%;
     height: auto;
 }
