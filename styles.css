@@ -1,8 +1,7 @@
-/* Use the Pirata One font */
 body {
     background-color: #000;
     color: #fff;
-    font-family: 'Pirata One', sans-serif; /* Apply the Pirata One font */
+    font-family: 'Your Chosen Font', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -66,13 +65,28 @@ h2 {
 
 .movie, .game {
     margin: 10px;
-    max-width: 150px; /* Adjust the max-width as needed */
+    max-width: 150px;
     text-align: center;
+}
+
+/* Add CSS styles for download button */
+.download-button {
+    display: inline-block;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px; /* Adds rounding to the button */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.download-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Adds an animation on hover */
 }
 
 /* Add CSS styles for video iframe */
 iframe {
     max-width: 100%;
 }
-
-/* Your existing CSS styles here */
