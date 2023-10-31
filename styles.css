@@ -80,9 +80,18 @@ h2 {
     height: auto;
 }
 
-/* Add CSS styles for video elements */
-.video {
+
+/* Ensure videos are responsive within their sections */
+video {
     max-width: 100%;
+    height: auto;
+}
+
+/* Add CSS styles for logo-video elements */
+.logo-video {
+    max-width: 100%;
+    text-align: center;
+    display: inline-block; /* Keep elements on the same line */
 }
 
 /* Ensure videos are responsive within their sections */
