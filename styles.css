@@ -49,6 +49,14 @@ h2 {
     text-align: center; /* Center the h2 elements */
 }
 
+/* Add CSS styles for movie and game logos */
+.movie-logo, .game-logo {
+    max-width: 200px; /* Adjust the max-width as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 .movie-grid, .game-grid {
     display: flex;
     flex-wrap: wrap;
