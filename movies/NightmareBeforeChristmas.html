@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css"> <!-- Include styles.css -->
     <title>The Nightmare Before Christmas</title>
 </head>
 <body>
@@ -25,13 +26,13 @@
 
     <script>
         const apiKey = 'ddec9f7a'; // Replace with your IMDb API key
+        const imdbUrl = 'https://m.imdb.com/title/tt0107688/'; // IMDb URL for "The Nightmare Before Christmas"
 
-        // Get the IMDb ID from the query parameter
-        const urlParams = new URLSearchParams(window.location.search);
-        const imdbId = urlParams.get('imdbId');
+        // Extract the IMDb ID from the IMDb URL
+        const imdbId = imdbUrl.match(/tt\d+/);
 
         if (imdbId) {
-            const apiUrl = `https://www.omdbapi.com/?i=${imdbId}&apikey=${apiKey}`;
+            const apiUrl = `https://www.omdbapi.com/?i=${imdbId[0]}&apikey=${apiKey}`;
 
             fetch(apiUrl)
                 .then((response) => response.json())
@@ -39,6 +40,7 @@
                     if (data.Response === 'True') {
                         const movieDetails = document.getElementById('movie-details');
                         movieDetails.innerHTML = `
+                            <p><strong>Title:</strong> ${data.Title}</p>
                             <p><strong>IMDb Rating:</strong> ${data.imdbRating}</p>
                             <p><strong>Release Date:</strong> ${data.Released}</p>
                             <!-- Add more details as needed -->
