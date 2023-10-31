@@ -103,3 +103,11 @@ video {
 body:not(.index) section.logo-video video {
     max-height: 100vh;
 }
+
+/* Add CSS styles for all videos except YouTube videos */
+video:not([src*="youtube.com"]) {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Adds a white glow effect */
+}
+
