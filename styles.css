@@ -49,13 +49,13 @@ h2 {
     text-align: center; /* Center the h2 elements */
 }
 
-.movie-grid {
+.movie-grid, .game-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.movie {
+.movie, .game {
     margin: 10px;
     max-width: 150px;
     text-align: center;
