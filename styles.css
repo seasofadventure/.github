@@ -86,11 +86,13 @@ video {
     height: auto;
 }
 
-/* Add CSS styles for logo-video elements */
+/* Center the content within the section */
 .logo-video {
-    max-width: 100%;
-    text-align: center;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* This sets the section to full viewport height for centering */
 }
 
 /* Ensure videos are responsive within their sections */
