@@ -48,14 +48,14 @@ h2 {
     text-align: center;
 }
 
-/* Add CSS styles for movie and game logos */
+/* Add CSS styles for movie, game, and logo-video elements */
 .movie-grid, .game-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.movie, .game {
+.movie, .game, .logo-video {
     margin: 10px;
     max-width: 150px;
     text-align: center;
