@@ -117,14 +117,7 @@ video:not([src*="youtube.com"]) {
 
 /* Your existing CSS styles for the logo class */
 .movie-logo, .game-logo {
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
-}
-
-/* Add a media query for screens with a maximum width of 768px (adjust the value as needed) */
-@media (max-width: 768px) {
-    .movie-logo, .game-logo {
-        max-width: 50%; /* Adjust the percentage as needed */
-    }
 }
 
