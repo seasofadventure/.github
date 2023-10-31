@@ -99,3 +99,8 @@ video {
     max-width: 75%;
     height: auto;
 }
+
+/* Limit maximum height of the video element to the viewport height */
+body:not(.index) section.logo-video video {
+    max-height: 100vh;
+}
