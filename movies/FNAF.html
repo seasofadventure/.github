@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles.css"> <!-- Note the path to the CSS file -->
     <title>Five Nights at Freddy's</title>
 </head>
 <body>
@@ -18,5 +17,40 @@
             Your browser does not support the video tag.
         </video>
     </section>
+
+    <section id="movie-info">
+        <h2>Movie Information</h2>
+        <div id="movie-details"></div>
+    </section>
+
+    <script>
+        const apiKey = 'ddec9f7a'; // Replace with your IMDb API key
+
+        // Get the IMDb ID from the query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const imdbId = urlParams.get('imdbId');
+
+        if (imdbId) {
+            const apiUrl = `https://www.omdbapi.com/?i=${imdbId}&apikey=${apiKey}`;
+
+            fetch(apiUrl)
+                .then((response) => response.json())
+                .then((data) => {
+                    if (data.Response === 'True') {
+                        const movieDetails = document.getElementById('movie-details');
+                        movieDetails.innerHTML = `
+                            <p><strong>IMDb Rating:</strong> ${data.imdbRating}</p>
+                            <p><strong>Release Date:</strong> ${data.Released}</p>
+                            <!-- Add more details as needed -->
+                        `;
+                    } else {
+                        console.error('Movie not found');
+                    }
+                })
+                .catch((error) => {
+                    console.error('An error occurred:', error);
+                });
+        }
+    </script>
 </body>
 </html>
