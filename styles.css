@@ -1,7 +1,8 @@
+/* Use the Pirata One font */
 body {
     background-color: #000;
     color: #fff;
-    font-family: 'Your Chosen Font', sans-serif;
+    font-family: 'Pirata One', sans-serif; /* Apply the Pirata One font */
     margin: 0;
     padding: 0;
 }
@@ -79,6 +80,8 @@ h2 {
     border-radius: 15px; /* Adds rounding to the button */
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
+    text-decoration: none; /* Remove underline */
+    display: inline-block;
 }
 
 .download-button:hover {
