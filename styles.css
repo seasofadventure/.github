@@ -17,7 +17,7 @@ header {
 h1 {
     font-size: 36px;
     text-align: center;
-    max-width: 100%; /* Ensure the header doesn't overflow */
+    max-width: 100%;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -50,13 +50,13 @@ a {
 section {
     padding: 20px;
     text-align: center;
-    max-width: 100%; /* Ensure the sections don't overflow */
+    max-width: 100%;
 }
 
 h2 {
     font-size: 24px;
     text-align: center;
-    max-width: 100%; /* Ensure the titles don't overflow */
+    max-width: 100%;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -80,7 +80,6 @@ h2 {
     height: auto;
 }
 
-
 /* Ensure videos are responsive within their sections */
 video {
     max-width: 100%;
@@ -91,7 +90,7 @@ video {
 .logo-video {
     max-width: 75%;
     text-align: center;
-    display: inline-block; /* Keep elements on the same line */
+    display: inline-block;
 }
 
 /* Ensure videos are responsive within their sections */
