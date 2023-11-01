@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css"> <!-- Include styles.css from the main folder -->
+    <link rel="icon" href="https://i.ibb.co/pQJDwyq/Cropped-Image-2.png" type="image/png">
+    <title>Super Mario Bros Movie</title>
+</head>
+<body>
+    <section id="logo">
+        <a href="../index.html">
+            <img src="https://i.ibb.co/v3KF1bf/image-2023-11-01-155330767.png" alt="FNAF Movie Logo" class="game-logo">
+        </a>
+    </section>
+
+    <section id="video">
+        <video controls>
+            <source src="https://archive.org/download/hfdhgvdhfygvdfyhghfdgvhjfghvfgjcgfhfgcjgvbhgfhb/%5B1920x1080%5D%20The%20Super%20Mario%20Bros.%20Movie.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+</body>
+</html>
