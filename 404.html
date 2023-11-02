@@ -79,15 +79,17 @@
 
 <body>
     <div class="background-gif"></div>
-    <audio autoplay loop>
-        <source src="https://github.com/seasofadventure/.github/raw/main/in-pursuit-of-a-pirate-127812.mp3"
-            type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
     <div class="container">
         <div class="counter">404</div>
         <div class="text">Page Not Found</div>
     </div>
+
+    <script>
+        // Automatically redirect to index.html after 10 seconds
+        setTimeout(function () {
+            window.location.href = 'index.html';
+        }, 10000);
+    </script>
 </body>
 
 </html>
