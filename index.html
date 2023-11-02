@@ -115,7 +115,8 @@
 
         // Fetch game covers from SteamGridDB and add them to the game grid
         games.forEach(async (gameTitle) => {
-            const coverUrl = await fetchGameCovers(gameTitle);
+            let coverUrl = await fetchGameCovers(gameTitle);
+
             if (coverUrl) {
                 const gameGrid = document.getElementById("game-grid");
                 const gameDiv = document.createElement("div");
