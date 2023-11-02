@@ -5,26 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="https://i.ibb.co/Qf33Jhq/ezgif-4-770d4f5fd8.png" type="image/png">
-    <title>404 - Page Not Found</title>
+    <title>404 - Seas Of Adventure</title>
+    <style>
+        /* Add CSS for styling the 404 page */
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #000;
+            color: #ffaf46;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .counter {
+            font-size: 60px;
+            text-transform: uppercase;
+            transform: translate3d(0, -100%, 0);
+            opacity: 0;
+            animation: counterAnimation 3s 0.5s forwards;
+        }
+
+        .text {
+            font-size: 30px;
+            transform: translate3d(0, 100%, 0);
+            opacity: 0;
+            animation: textAnimation 3s 1.5s forwards;
+        }
+
+        @keyframes counterAnimation {
+            0% {
+                transform: translate3d(0, -100%, 0);
+                opacity: 0;
+            }
+            100% {
+                transform: translate3d(0, 0, 0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes textAnimation {
+            0% {
+                transform: translate3d(0, 100%, 0);
+                opacity: 0;
+            }
+            100% {
+                transform: translate3d(0, 0, 0);
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="error-container">
-        <h1 class="glitch" data-text="404">404</h1>
-        <h2 class="fade-in">Page Not Found</h2>
-    </div>
-    <div class="waves-container">
-        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-             viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-            <defs>
-                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-            </defs>
-            <g class="parallax">
-                <use xlink:href="#gentle-wave" x="48" y="0" fill="#32b8e5" />
-                <use xlink:href="#gentle-wave" x="48" y="3" fill="#32b8e5" />
-                <use xlink:href="#gentle-wave" x="48" y="5" fill="#32b8e5" />
-                <use xlink:href="#gentle-wave" x="48" y="7" fill="#32b8e5" />
-            </g>
-        </svg>
+    <div class="container">
+        <div class="counter">404</div>
+        <div class="text">Page Not Found</div>
     </div>
 </body>
 </html>
