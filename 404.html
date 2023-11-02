@@ -7,61 +7,66 @@
     <link rel="icon" href="https://i.ibb.co/Qf33Jhq/ezgif-4-770d4f5fd8.png" type="image/png">
     <title>404 - Seas Of Adventure</title>
     <style>
-        /* Add CSS for styling the 404 page */
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #000;
-            color: #ffaf46;
-            font-family: Arial, sans-serif;
-        }
+    /* Add CSS for styling the 404 page */
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-image: url('https://i.imgur.com/vezu5qa.gif');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        opacity: 0.4;
+        background-color: #000; /* Fallback background color */
+        color: #ffaf46;
+        font-family: Arial, sans-serif;
+    }
 
-        .container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
 
-        .counter {
-            font-size: 60px;
-            text-transform: uppercase;
+    .counter {
+        font-size: 60px;
+        text-transform: uppercase;
+        transform: translate3d(0, -100%, 0);
+        opacity: 0;
+        animation: counterAnimation 3s 0.5s forwards;
+    }
+
+    .text {
+        font-size: 30px;
+        transform: translate3d(0, 100%, 0);
+        opacity: 0;
+        animation: textAnimation 3s 1.5s forwards;
+    }
+
+    @keyframes counterAnimation {
+        0% {
             transform: translate3d(0, -100%, 0);
             opacity: 0;
-            animation: counterAnimation 3s 0.5s forwards;
         }
+        100% {
+            transform: translate3d(0, 0, 0);
+            opacity: 1;
+        }
+    }
 
-        .text {
-            font-size: 30px;
+    @keyframes textAnimation {
+        0% {
             transform: translate3d(0, 100%, 0);
             opacity: 0;
-            animation: textAnimation 3s 1.5s forwards;
         }
-
-        @keyframes counterAnimation {
-            0% {
-                transform: translate3d(0, -100%, 0);
-                opacity: 0;
-            }
-            100% {
-                transform: translate3d(0, 0, 0);
-                opacity: 1;
-            }
+        100% {
+            transform: translate3d(0, 0, 0);
+            opacity: 1;
         }
-
-        @keyframes textAnimation {
-            0% {
-                transform: translate3d(0, 100%, 0);
-                opacity: 0;
-            }
-            100% {
-                transform: translate3d(0, 0, 0);
-                opacity: 1;
-            }
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
     <audio autoplay loop>
