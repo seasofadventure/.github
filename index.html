@@ -50,6 +50,12 @@
             "Pokemon The rise of Darkrai"
         ];
 
+        // Define game titles
+        const games = [
+            "Hollow Knight",
+            "Baba Is You"
+        ];
+
         // Function to fetch movie covers using TMDb API
         async function fetchMovieCovers(movieTitle) {
             try {
@@ -73,6 +79,22 @@
             return null;
         }
 
+        // Function to fetch game covers from SteamGridDB
+        async function fetchGameCovers(gameTitle) {
+            const apiKey = '11ab5b9ee5df335261ec569e966d46bb';
+            const response = await fetch(`https://www.steamgriddb.com/api/v2/grids/steam/${gameTitle}`, {
+                headers: {
+                    'Authorization': `Bearer ${apiKey}`
+                }
+            });
+            const data = await response.json();
+            if (data.data && data.data.length > 0) {
+                const coverUrl = data.data[0].url;
+                return coverUrl;
+            }
+            return null;
+        }
+
         // Fetch movie covers using TMDb API and add them to the movie grid
         movies.forEach(async (movieTitle) => {
             let coverUrl = await fetchMovieCovers(movieTitle);
@@ -88,6 +110,23 @@
                     </a>
                 `;
                 movieGrid.appendChild(movieDiv);
+            }
+        });
+
+        // Fetch game covers from SteamGridDB and add them to the game grid
+        games.forEach(async (gameTitle) => {
+            const coverUrl = await fetchGameCovers(gameTitle);
+            if (coverUrl) {
+                const gameGrid = document.getElementById("game-grid");
+                const gameDiv = document.createElement("div");
+                gameDiv.classList.add("game");
+                gameDiv.innerHTML = `
+                    <a href="games/${gameTitle.replace(/ /g, '')}.html">
+                        <img src="${coverUrl}" alt="${gameTitle}">
+                        <h3>${gameTitle}</h3>
+                    </a>
+                `;
+                gameGrid.appendChild(gameDiv);
             }
         });
     </script>
