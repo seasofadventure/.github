@@ -73,7 +73,19 @@
             "Baba Is You"
         ];
 
-        // Fetch movie covers and titles using OMDB API
+        // Function to fetch game covers from GameTDB
+        async function fetchGameCovers(gameTitle) {
+            const response = await fetch(`https://www.gametdb.com/Wii/${gameTitle}.txt`);
+            const text = await response.text();
+            const match = text.match(/3D_Box = (.+)/);
+            if (match) {
+                const coverUrl = match[1];
+                return coverUrl;
+            }
+            return null;
+        }
+
+        // Fetch movie covers using OMDB API
         movies.forEach(async (movieTitle) => {
             const response = await fetch(`https://www.omdbapi.com/?t=${movieTitle}&apikey=ddec9f7a`);
             const data = await response.json();
@@ -91,17 +103,16 @@
             }
         });
 
-        // Fetch game covers and titles using Giant Bomb API
+        // Fetch game covers from GameTDB and add them to the game grid
         games.forEach(async (gameTitle) => {
-            const response = await fetch(`https://www.giantbomb.com/api/search/?api_key=c0b94e97578d3e02bd4951e6c01b0c6b6f50b019&format=json&resources=game&query=${gameTitle}`);
-            const data = await response.json();
-            if (data.results && data.results.length > 0 && data.results[0].image) {
+            const coverUrl = await fetchGameCovers(gameTitle);
+            if (coverUrl) {
                 const gameGrid = document.getElementById("game-grid");
                 const gameDiv = document.createElement("div");
                 gameDiv.classList.add("game");
                 gameDiv.innerHTML = `
                     <a href="games/${gameTitle.replace(/ /g, '')}.html">
-                        <img src="${data.results[0].image.small_url}" alt="${gameTitle}">
+                        <img src="${coverUrl}" alt="${gameTitle}">
                         <h3>${gameTitle}</h3>
                     </a>
                 `;
