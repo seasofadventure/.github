@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +7,6 @@
     <link rel="icon" href="https://i.ibb.co/Qf33Jhq/ezgif-4-770d4f5fd8.png" type="image/png">
     <title>Seas Of Adventure</title>
 </head>
-
 <body>
     <header>
         <h1>Seas of Adventure</h1>
@@ -132,7 +130,14 @@
                 gameGrid.appendChild(gameDiv);
             }
         });
+
+        // Check if the subpage is invalid and redirect to 404.html
+        const path = window.location.pathname;
+        const validSubpages = ["movies", "games"]; // Add your valid subpages here
+
+        if (!validSubpages.some(subpage => path.startsWith("/" + subpage))) {
+            window.location.href = "/404.html";
+        }
     </script>
 </body>
-
 </html>
