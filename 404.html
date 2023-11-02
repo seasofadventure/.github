@@ -9,45 +9,49 @@
     <style>
         /* Add CSS for styling the 404 page */
         body {
-            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
             background-color: #1a1a1a;
             color: #ffaf46;
-            text-align: center;
+            font-family: Arial, sans-serif;
         }
 
-        h1 {
-            font-size: 100px;
-            margin: 0;
-            display: none; /* Initially hidden */
+        .glitch {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 120px;
+            text-transform: uppercase;
+            animation: glitch 1s infinite;
         }
 
-        .typewriter-text {
-            animation: typing 3s steps(12, end), blink-caret 0.5s step-end infinite;
-            white-space: nowrap;
-            overflow: hidden;
-            border-right: 4px solid orange;
-            display: block; /* Initially hidden */
-        }
-
-        @keyframes typing {
+        @keyframes glitch {
             0% {
-                display: block;
-                width: 0;
+                transform: translate(-50%, -50%);
+                color: #ffaf46;
+                text-shadow: -5px 0 #ffaf46, 5px 0 #ffaf46;
             }
-            100% {
-                width: 100%;
+            25% {
+                transform: translate(-52%, -48%);
+                color: #ffaf46;
+                text-shadow: -7px 0 #ffaf46, 7px 0 #ffaf46;
             }
-        }
-
-        @keyframes blink-caret {
             50% {
-                border-color: transparent;
+                transform: translate(-50%, -52%);
+                color: #ffaf46;
+                text-shadow: -5px 0 #ffaf46, 5px 0 #ffaf46;
+            }
+            75% {
+                transform: translate(-48%, -50%);
+                color: #ff0000;
+                text-shadow: -5px 0 #ff0000, 5px 0 #ff0000;
             }
         }
     </style>
 </head>
 <body>
-    <h1>404</h1>
-    <p class="typewriter-text">This is not a valid suburl.</p>
+    <div class="glitch">404</div>
 </body>
 </html>
