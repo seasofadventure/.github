@@ -64,14 +64,14 @@ h2 {
     text-overflow: ellipsis;
 }
 
-/* Add CSS styles for movie logos */
+/* Add CSS styles for movie logos and game logos */
 .movie-grid, .game-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.movie, .game {
+.movie, .game, .logo-video {
     margin: 10px;
     max-width: 150px;
     text-align: center;
@@ -95,12 +95,6 @@ video {
     align-items: center;
     justify-content: center;
     height: 100vh; /* This sets the section to full viewport height for centering */
-}
-
-/* Ensure videos are responsive within their sections */
-video {
-    max-width: 100%;
-    height: auto;
 }
 
 /* Limit maximum height of the video element to the viewport height */
@@ -131,4 +125,4 @@ video:not([src*="youtube.com"]) {
     font-size: 18px; /* Adjust the font size as needed */
     border-radius: 5px; /* Add rounded corners */
     cursor: pointer; /* Add a pointer cursor on hover */
-}
+    }
