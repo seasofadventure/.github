@@ -135,7 +135,7 @@
 
         // Check if the subpage is invalid and redirect to 404.html
         const path = window.location.pathname;
-        const validSubpages = ["movies", "games"]; // Add your valid subpages here
+        const validSubpages = ["movies", "games", "index.html"]; // Add your valid subpages here
 
         if (!validSubpages.some(subpage => path.startsWith("/" + subpage))) {
             window.location.href = "/.github/404.html";
