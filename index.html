@@ -6,6 +6,59 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="https://i.ibb.co/Qf33Jhq/ezgif-4-770d4f5fd8.png" type="image/png">
     <title>Seas Of Adventure</title>
+    <style>
+        .movie-grid, .game-grid {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .movie, .game {
+            flex: 0 0 32%; /* Adjust this value as needed */
+            margin: 2%;
+            text-align: center;
+            position: relative;
+        }
+
+        .movie img, .game img {
+            width: 100%;
+            height: auto;
+        }
+
+        .loading-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 1;
+            transition: opacity 0.3s ease-in-out;
+            pointer-events: none;
+        }
+
+        .loading-overlay .loader {
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #3498db;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loaded .loading-overlay {
+            opacity: 0;
+            pointer-events: none;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -21,42 +74,50 @@
     </nav>
 
     <section id="movies">
-    <h2>Movies</h2>
-    <div class="movie-grid">
-        <!-- The Nightmare Before Christmas -->
-        <div class="movie">
-            <a href="movies/NightmareBeforeChristmas.html">
-                <img src="https://m.media-amazon.com/images/M/MV5BNWE4OTNiM2ItMjY4Ni00ZTViLWFiZmEtZGEyNGY2ZmNlMzIyXkEyXkFqcGdeQXVyMDU5NDcxNw@@._V1_.jpg" alt="The Nightmare Before Christmas">
-                <h3>The Nightmare Before Christmas</h3>
-            </a>
-        </div>
+        <h2>Movies</h2>
+        <div class="movie-grid">
+            <!-- The Nightmare Before Christmas -->
+            <div class="movie">
+                <a href="movies/NightmareBeforeChristmas.html">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNWE4OTNiM2ItMjY4Ni00ZTViLWFiZmEtZGEyNGY2ZmNlMzIyXkEyXkFqcGdeQXVyMDU5NDcxNw@@._V1_.jpg" alt="The Nightmare Before Christmas">
+                    <h3>The Nightmare Before Christmas</h3>
+                </a>
+            </div>
 
-        <!-- Five Nights at Freddy's -->
-        <div class="movie">
-            <a href="movies/FNAF.html">
-                <img src="https://i.ibb.co/YPKhGT4/s-l1200.webp" alt="Five Nights at Freddy's">
-                <h3>Five Nights at Freddy's</h3>
-            </a>
-        </div>
+            <!-- Five Nights at Freddy's -->
+            <div class="movie">
+                <div class="loading-overlay">
+                    <div class="loader"></div>
+                </div>
+                <a href="movies/FNAF.html" class="loaded">
+                    <img src="https://i.ibb.co/YPKhGT4/s-l1200.webp" alt="Five Nights at Freddy's">
+                    <h3>Five Nights at Freddy's</h3>
+                </a>
+            </div>
 
-        <!-- Animal Farm -->
-        <div class="movie">
-            <a href="movies/AnimalFarm.html">
-                <img src="https://i.ibb.co/wdhNHmf/MV5-BMTI3-Nz-I2-OTA2-OF5-BMl5-Ban-Bn-Xk-Ft-ZTcw-Nj-M0-MDcy-MQ-V1.jpg" alt="Animal Farm">
-                <h3>Animal Farm</h3>
-            </a>
-        </div>
+            <!-- Animal Farm -->
+            <div class="movie">
+                <div class="loading-overlay">
+                    <div class="loader"></div>
+                </div>
+                <a href="movies/AnimalFarm.html" class="loaded">
+                    <img src="https://i.ibb.co/wdhNHmf/MV5-BMTI3-Nz-I2-OTA2-OF5-BMl5-Ban-Bn-Xk-Ft-ZTcw-Nj-M0-MDcy-MQ-V1.jpg" alt="Animal Farm">
+                    <h3>Animal Farm</h3>
+                </a>
+            </div>
 
-        <!-- Super Mario Bros Movie -->
-        <div class="movie">
-            <a href="movies/SuperMarioBros.html">
-                <img src="https://i.ibb.co/4NY2nHF/4097326-the-super-mario-bros-movie-poster.jpg" alt="Super Mario Bros Movie">
-                <h3>Super Mario Bros Movie</h3>
-            </a>
+            <!-- Super Mario Bros Movie -->
+            <div class="movie">
+                <div class="loading-overlay">
+                    <div class="loader"></div>
+                </div>
+                <a href="movies/SuperMarioBros.html" class="loaded">
+                    <img src="https://i.ibb.co/4NY2nHF/4097326-the-super-mario-bros-movie-poster.jpg" alt="Super Mario Bros Movie">
+                    <h3>Super Mario Bros Movie</h3>
+                </a>
+            </div>
         </div>
-    </div>
-</section>
-
+    </section>
 
     <section id="games">
         <h2>Games</h2>
@@ -78,6 +139,15 @@
             </div>
         </div>
     </section>
+    <script>
+        // This script adds a class "loaded" to the movie and game links when the page is fully loaded
+        window.addEventListener('load', function () {
+            const loadedElements = document.querySelectorAll('.loaded');
+            loadedElements.forEach(element => {
+                element.classList.add('loaded');
+            });
+        });
+    </script>
 </body>
-    </html>
+                </html>
     
