@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://i.ibb.co/Qf33Jhq/ezgif-4-770d4f5fd8.png" type="image/png">
+    <title>404 - Seas Of Adventure</title>
+    <style>
+        /* Add CSS for styling the 404 page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #ffaf46;
+            text-align: center;
+        }
 
+        h1 {
+            font-size: 100px;
+            margin: 0;
+        }
+
+        .marquee-text {
+            white-space: nowrap;
+            overflow: hidden;
+            animation: marquee 8s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .typewriter-text {
+            animation: typing 3s steps(12, end), blink-caret 0.5s step-end infinite;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 4px solid orange;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink-caret {
+            50% {
+                border-color: transparent;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>404</h1>
+    <p class="marquee-text">Page Not Found</p>
+    <p class="typewriter-text">Sorry, the page you are looking for doesn't exist.</p>
+</body>
+</html>
