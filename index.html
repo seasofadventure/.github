@@ -51,7 +51,7 @@
     </section>
 
     <script>
-        // Define movie and game titles
+        // Define movie titles
         const movies = [
             "The Nightmare Before Christmas",
             "Five Nights at Freddy's",
@@ -68,35 +68,32 @@
             "Pokemon The rise of Darkrai"
         ];
 
-        const games = [
-            "Hollow Knight",
-            "Baba Is You"
-        ];
-
-        // Function to fetch game covers from Steamgriddb
-        async function fetchGameCovers(gameTitle) {
-            const apiKey = '11ab5b9ee5df335261ec569e966d46bb';
-            const response = await fetch(`https://www.steamgriddb.com/api/v2/grids/steam/${gameTitle}`, {
-                headers: {
-                    'Authorization': `Bearer ${apiKey}`
+        // Function to fetch movie covers using TMDb API
+        async function fetchMovieCovers(movieTitle) {
+            try {
+                const apiKey = '225f2f562d49c4a8d484591f1ae3027c';
+                const accessToken = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMjVmMmY1NjJkNDlj4A8d484591f1ae3027c';
+                const response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${encodeURIComponent(movieTitle)}`, {
+                    headers: {
+                        'Authorization': `Bearer ${accessToken}`,
+                    },
+                });
+                const data = await response.json();
+                if (data.results && data.results.length > 0) {
+                    const posterPath = data.results[0].poster_path;
+                    if (posterPath) {
+                        return `https://image.tmdb.org/t/p/w500${posterPath}`;
+                    }
                 }
-            });
-            const data = await response.json();
-            if (data.data && data.data.length > 0) {
-                const coverUrl = data.data[0].url;
-                return coverUrl;
+            } catch (error) {
+                console.error('Failed to fetch movie cover:', error);
             }
             return null;
         }
 
-        // Fetch movie covers from hosted URLs and add them to the movie grid
+        // Fetch movie covers using TMDb API and add them to the movie grid
         movies.forEach(async (movieTitle) => {
-            let coverUrl = null;
-            if (movieTitle === "Five Nights at Freddy's") {
-                coverUrl = "https://i.imgur.com/YOUR_IMAGE_FILE_NAME.jpg"; // Replace YOUR_IMAGE_FILE_NAME with the actual file name
-            } else {
-                coverUrl = await fetchMovieCovers(movieTitle);
-            }
+            let coverUrl = await fetchMovieCovers(movieTitle);
 
             if (coverUrl) {
                 const movieGrid = document.getElementById("movie-grid");
@@ -109,23 +106,6 @@
                     </a>
                 `;
                 movieGrid.appendChild(movieDiv);
-            }
-        });
-
-        // Fetch game covers from Steamgriddb and add them to the game grid
-        games.forEach(async (gameTitle) => {
-            const coverUrl = await fetchGameCovers(gameTitle);
-            if (coverUrl) {
-                const gameGrid = document.getElementById("game-grid");
-                const gameDiv = document.createElement("div");
-                gameDiv.classList.add("game");
-                gameDiv.innerHTML = `
-                    <a href="games/${gameTitle.replace(/ /g, '')}.html">
-                        <img src="${coverUrl}" alt="${gameTitle}">
-                        <h3>${gameTitle}</h3>
-                    </a>
-                `;
-                gameGrid.appendChild(gameDiv);
             }
         });
     </script>
