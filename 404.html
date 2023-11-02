@@ -11,8 +11,9 @@
         body {
             margin: 0;
             padding: 0;
-            overflow: hidden;
+            background: url('https://i.imgur.com/WGBvOfH.png') repeat-x bottom;
             background-color: #000;
+            overflow: hidden;
         }
 
         .container {
@@ -26,7 +27,7 @@
         .counter {
             font-size: 60px;
             text-transform: uppercase;
-            color: #32b8e5; /* Change the color to #32b8e5 */
+            color: #32b8e5;
             transform: translate3d(0, -100%, 0);
             opacity: 0;
             animation: counterAnimation 3s 0.5s forwards;
@@ -34,12 +35,10 @@
 
         .text {
             font-size: 30px;
-            color: #32b8e5; /* Change the color to #32b8e5 */
+            color: #32b8e5;
             transform: translate3d(0, 100%, 0);
             opacity: 0;
             animation: textAnimation 3s 1.5s forwards;
-            /* Add ocean waves animation */
-            animation: oceanWaves 2s linear infinite;
         }
 
         @keyframes counterAnimation {
@@ -61,15 +60,6 @@
             100% {
                 transform: translate3d(0, 0, 0);
                 opacity: 1;
-            }
-        }
-
-        @keyframes oceanWaves {
-            0% {
-                transform: translate3d(0, 0, 0);
-            }
-            100% {
-                transform: translate3d(-100%, 0, 0);
             }
         }
     </style>
