@@ -126,3 +126,87 @@ video:not([src*="youtube.com"]) {
     border-radius: 5px;
     cursor: pointer;
 }
+
+/* 404 Page Styles */
+.error-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background: #32b8e5;
+    color: white;
+}
+
+h1.glitch {
+    font-size: 100px;
+    animation: glitch 1s ease infinite;
+}
+
+h1.glitch:after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 2px;
+    width: 100%;
+    height: 100%;
+    clip: rect(24px, 500px, 60px, 0);
+    background: #32b8e5;
+    color: #fff;
+    display: block;
+    position: absolute;
+    top: 0;
+    animation: noise-anim 2s linear infinite;
+}
+
+h2.fade-in {
+    font-size: 24px;
+    animation: fade-in 2s;
+    opacity: 0;
+}
+
+/* Waves Container Styles */
+.waves-container {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px;
+    min-height: 100px;
+    max-height: 150px;
+    background: #32b8e5;
+}
+
+/* Animation Styles */
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+    }
+    25% {
+        transform: translate(2px, -2px);
+    }
+    50% {
+        transform: translate(-2px, 2px);
+    }
+    75% {
+        transform: translate(2px, -2px);
+    }
+    100% {
+        transform: translate(-2px, 2px);
+    }
+}
+
+@keyframes noise-anim {
+    0% {
+        clip: rect(11px, 9999px, 53px, 0);
+    }
+    /* ... (your existing animation styles) ... */
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
