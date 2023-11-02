@@ -40,132 +40,74 @@
 
     <section id="movies">
         <h2>Movies</h2>
-        <div class="movie-grid">
-            <!-- The Nightmare Before Christmas -->
-            <div class="movie">
-                <a href="movies/NightmareBeforeChristmas.html">
-                    <img src="https://m.media-amazon.com/images/M/MV5BNWE4OTNiM2ItMjY4Ni00ZTViLWFiZmEtZGEyNGY2ZmNlMzIyXkEyXkFqcGdeQXVyMDU5NDcxNw@@._V1_.jpg" alt="The Nightmare Before Christmas">
-                    <h3>The Nightmare Before Christmas</h3>
-                </a>
-            </div>
-
-            <!-- Five Nights at Freddy's -->
-            <div class="movie">
-                <a href="movies/FNAF.html">
-                    <img src="https://i.ibb.co/YPKhGT4/s-l1200.webp" alt="Five Nights at Freddy's">
-                    <h3>Five Nights at Freddy's</h3>
-                </a>
-            </div>
-
-            <!-- Animal Farm -->
-            <div class="movie">
-                <a href="movies/AnimalFarm.html">
-                    <img src="https://i.ibb.co/wdhNHmf/MV5-BMTI3-Nz-I2-OTA2-OF5-BMl5-Ban-Bn-Xt-ZTcw-Nj-M0-MDcy-MQ-V1.jpg" alt="Animal Farm">
-                    <h3>Animal Farm</h3>
-                </a>
-            </div>
-
-            <!-- Super Mario Bros Movie -->
-            <div class="movie">
-                <a href="movies/SuperMarioBros.html">
-                    <img src="https://i.ibb.co/4NY2nHF/4097326-the-super-mario-bros-movie-poster.jpg" alt="Super Mario Bros Movie">
-                    <h3>Super Mario Bros Movie</h3>
-                </a>
-            </div>
-
-            <!-- Pokemon Lucario and the Mystery Of Mew -->
-            <div class="movie">
-                <a href="movies/PokemonLucario.html">
-                    <img src="https://i.imgur.com/OcoXkSo.jpg" alt="Pokemon Lucario and the Mystery Of Mew">
-                    <h3>Pokemon Lucario and the Mystery Of Mew</h3>
-                </a>
-            </div>
-
-            <!-- Pokemon The Movie 2000 -->
-            <div class="movie">
-                <a href="movies/PokemonMovie2000.html">
-                    <img src="https://i.imgur.com/goLGzPP.jpg" alt="Pokemon The Movie 2000">
-                    <h3>Pokemon The Movie 2000</h3>
-                </a>
-            </div>
-
-            <!-- Pokemon Spell of Unown -->
-            <div class="movie">
-                <a href="movies/PokemonSpellOfUnown.html">
-                    <img src="https://i.imgur.com/p0zSfTe.jpg" alt="Pokemon Spell of Unown">
-                    <h3>Pokemon Spell of Unown</h3>
-                </a>
-            </div>
-
-            <!-- Pokemon 4ever Celebi -->
-            <div class="movie">
-                <a href="movies/Pokemon4everCelebi.html">
-                    <img src="https://i.imgur.com/auKGIit.png" alt="Pokemon 4ever Celebi">
-                    <h3>Pokemon 4ever Celebi</h3>
-                </a>
-            </div>
-
-            <!-- Pokemon Heroes Latias and Latios -->
-            <div class="movie">
-                <a href="movies/PokemonHeroes.html">
-                    <img src="https://i.imgur.com/PmtQVYV.jpg" alt="Pokemon Heroes Latias and Latios">
-                    <h3>Pokemon Heroes Latias and Latios</h3>
-                </a>
-            </div>
-
-            <!-- Pokemon Jirachi Wish Maker -->
-            <div class="movie">
-                <a href="movies/PokemonJirachi.html">
-                    <img src="https://i.imgur.com/F0YU3nb.jpg" alt="Pokemon Jirachi Wish Maker">
-                    <h3>Pokemon Jirachi Wish Maker</h3>
-                </a>
-            </div>
-
-            <!-- Pokemon Destiny Deoxys -->
-            <div class="movie">
-                <a href="movies/PokemonDestinyDeoxys.html">
-                    <img src="https://i.imgur.com/hwX29AD.png" alt="Pokemon Destiny Deoxys">
-                    <h3>Pokemon Destiny Deoxys</h3>
-                </a>
-            </div>
-
-            <!-- Pokemon Ranger and the temple of the sea -->
-            <div class="movie">
-                <a href="movies/PokemonRanger.html">
-                    <img src="https://i.imgur.com/twOcpFz.jpg" alt="Pokemon Ranger and the temple of the sea">
-                    <h3>Pokemon Ranger and the temple of the sea</h3>
-                </a>
-            </div>
-
-            <!-- Pokemon The rise of Darkrai -->
-            <div class="movie">
-                <a href="movies/PokemonDarkrai.html">
-                    <img src="https://i.imgur.com/hzkX8MX.jpg" alt="Pokemon The rise of Darkrai">
-                    <h3>Pokemon The rise of Darkrai</h3>
-                </a>
-            </div>
+        <div class="movie-grid" id="movie-grid">
         </div>
     </section>
 
     <section id="games">
         <h2>Games</h2>
-        <div class="game-grid">
-            <!-- Hollow Knight -->
-            <div class="game">
-                <a href="games/HollowKnight.html">
-                    <img src="https://i.ibb.co/gw3Xk6D/HK-first-cover-art.png" alt="Hollow Knight">
-                    <h3>Hollow Knight</h3>
-                </a>
-            </div>
-
-            <!-- Baba Is You -->
-            <div class="game">
-                <a href="games/BabaIsYou.html">
-                    <img src="https://i.ibb.co/6FKcm8c/Baba-is-you-cover-art.jpg" alt="Baba Is You">
-                    <h3>Baba Is You</h3>
-                </a>
-            </div>
+        <div class="game-grid" id="game-grid">
         </div>
     </section>
+
+    <script>
+        // Define movie and game titles
+        const movies = [
+            "The Nightmare Before Christmas",
+            "Five Nights at Freddy's",
+            "Animal Farm",
+            "Super Mario Bros Movie",
+            "Pokemon Lucario and the Mystery Of Mew",
+            "Pokemon The Movie 2000",
+            "Pokemon Spell of Unown",
+            "Pokemon 4ever Celebi",
+            "Pokemon Heroes Latias and Latios",
+            "Pokemon Jirachi Wish Maker",
+            "Pokemon Destiny Deoxys",
+            "Pokemon Ranger and the temple of the sea",
+            "Pokemon The rise of Darkrai"
+        ];
+
+        const games = [
+            "Hollow Knight",
+            "Baba Is You"
+        ];
+
+        // Fetch movie covers and titles using OMDB API
+        movies.forEach(async (movieTitle) => {
+            const response = await fetch(`http://www.omdbapi.com/?t=${movieTitle}&apikey=ddec9f7a`);
+            const data = await response.json();
+            if (data.Poster) {
+                const movieGrid = document.getElementById("movie-grid");
+                const movieDiv = document.createElement("div");
+                movieDiv.classList.add("movie");
+                movieDiv.innerHTML = `
+                    <a href="movies/${movieTitle.replace(/ /g, '')}.html">
+                        <img src="${data.Poster}" alt="${movieTitle}">
+                        <h3>${movieTitle}</h3>
+                    </a>
+                `;
+                movieGrid.appendChild(movieDiv);
+            }
+        });
+
+        // Fetch game covers and titles using Giant Bomb API
+        games.forEach(async (gameTitle) => {
+            const response = await fetch(`https://www.giantbomb.com/api/search/?api_key=YOUR_GIANT_BOMB_API_KEY&format=json&resources=game&query=${gameTitle}`);
+            const data = await response.json();
+            if (data.results && data.results.length > 0 && data.results[0].image) {
+                const gameGrid = document.getElementById("game-grid");
+                const gameDiv = document.createElement("div");
+                gameDiv.classList.add("game");
+                gameDiv.innerHTML = `
+                    <a href="games/${gameTitle.replace(/ /g, '')}.html">
+                        <img src="${data.results[0].image.small_url}" alt="${gameTitle}">
+                        <h3>${gameTitle}</h3>
+                    </a>
+                `;
+                gameGrid.appendChild(gameDiv);
+            }
+        });
+    </script>
 </body>
 </html>
