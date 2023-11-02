@@ -1,6 +1,6 @@
 /* styles.css */
 
-/* Use the Pirata One font */
+/* Base Styles */
 body {
     background-color: #000;
     color: #fff;
@@ -9,7 +9,7 @@ body {
     padding: 0;
 }
 
-/* Header styles */
+/* Header Styles */
 header {
     background-color: #000;
     text-align: center;
@@ -25,7 +25,7 @@ h1 {
     text-overflow: ellipsis;
 }
 
-/* Navigation styles */
+/* Navigation Styles */
 nav {
     background-color: #000;
     text-align: center;
@@ -48,7 +48,7 @@ a {
     color: #fff;
 }
 
-/* Section and title styles */
+/* Section and Title Styles */
 section {
     padding: 20px;
     text-align: center;
@@ -64,7 +64,7 @@ h2 {
     text-overflow: ellipsis;
 }
 
-/* Add CSS styles for movie logos and game logos */
+/* Grid Styles for Movies, Games, and Logos */
 .movie-grid, .game-grid {
     display: flex;
     flex-wrap: wrap;
@@ -82,47 +82,47 @@ h2 {
     height: auto;
 }
 
-/* Ensure videos are responsive within their sections */
+/* Responsive Video Styles */
 video {
     max-width: 100%;
     height: auto;
 }
 
-/* Center the content within the section */
+/* Center Content Within Section */
 .logo-video {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* This sets the section to full viewport height for centering */
+    height: 100vh; /* Sets the section to full viewport height for centering */
 }
 
-/* Limit maximum height of the video element to the viewport height */
+/* Limit Maximum Height of Videos */
 body:not(.index) section.logo-video video {
     max-height: 100vh;
 }
 
-/* Add CSS styles for all videos except YouTube videos */
+/* Styles for All Videos Except YouTube Videos */
 video:not([src*="youtube.com"]) {
     max-width: 100%;
     height: auto;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Adds a white glow effect */
 }
 
-/* Your existing CSS styles for the logo class */
+/* Logo Styles */
 .movie-logo, .game-logo {
     max-width: 50%;
     height: auto;
 }
 
-/* Style for the blue download button */
+/* Blue Download Button Styles */
 .blue-download-button {
-    background-color: #0074cc; /* Blue background color */
-    color: #fff; /* White text color */
-    padding: 10px 20px; /* Padding for the button */
-    border: none; /* Remove button border */
-    text-decoration: none; /* Remove underline on the link */
-    font-size: 18px; /* Adjust the font size as needed */
-    border-radius: 5px; /* Add rounded corners */
-    cursor: pointer; /* Add a pointer cursor on hover */
-    }
+    background-color: #0074cc;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
