@@ -84,6 +84,32 @@
     </div>
 
     <script>
+        // Redirect to similar subpages using fuzzy-wuzzy
+        function redirectToFuzzyMatch(subpages, currentURL) {
+            const fuzz = require('fuzzy-wuzzy');
+            const currentTitle = document.title;
+
+            const matches = fuzz.extract(currentTitle, subpages.map(page => page.title));
+            const bestMatch = matches[0];
+
+            if (bestMatch.score > 80) {
+                const matchedPage = subpages.find(page => page.title === bestMatch.choice);
+                const matchedURL = matchedPage.url;
+                console.log(`Redirecting to a similar URL: ${matchedURL}`);
+                window.location.href = matchedURL;
+            }
+        }
+
+        // Scrape and collect subpages dynamically
+        const subpages = Array.from(document.querySelectorAll('a'))
+            .map(link => ({
+                url: link.href,
+                title: link.textContent,
+            }));
+
+        // Call the fuzzy-wuzzy redirection function
+        redirectToFuzzyMatch(subpages, window.location.href);
+
         // Redirect to the main folder's index.html after 10 seconds
         setTimeout(function() {
             window.location.href = "/.github/index.html";
