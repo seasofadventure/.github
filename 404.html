@@ -18,21 +18,7 @@
         h1 {
             font-size: 100px;
             margin: 0;
-        }
-
-        .marquee-text {
-            white-space: nowrap;
-            overflow: hidden;
-            animation: marquee 8s linear infinite;
-        }
-
-        @keyframes marquee {
-            0% {
-                transform: translateX(100%);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
+            display: none; /* Initially hidden */
         }
 
         .typewriter-text {
@@ -40,13 +26,15 @@
             white-space: nowrap;
             overflow: hidden;
             border-right: 4px solid orange;
+            display: block; /* Initially hidden */
         }
 
         @keyframes typing {
-            from {
+            0% {
+                display: block;
                 width: 0;
             }
-            to {
+            100% {
                 width: 100%;
             }
         }
@@ -60,7 +48,6 @@
 </head>
 <body>
     <h1>404</h1>
-    <p class="marquee-text">Page Not Found</p>
-    <p class="typewriter-text">Sorry, the page you are looking for doesn't exist.</p>
+    <p class="typewriter-text">This is not a valid suburl.</p>
 </body>
 </html>
