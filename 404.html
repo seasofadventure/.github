@@ -13,8 +13,6 @@
             padding: 0;
             overflow: hidden;
             background-color: #000;
-            color: #ffaf46;
-            font-family: Arial, sans-serif;
         }
 
         .container {
@@ -28,6 +26,7 @@
         .counter {
             font-size: 60px;
             text-transform: uppercase;
+            color: #32b8e5; /* Change the color to #32b8e5 */
             transform: translate3d(0, -100%, 0);
             opacity: 0;
             animation: counterAnimation 3s 0.5s forwards;
@@ -35,9 +34,12 @@
 
         .text {
             font-size: 30px;
+            color: #32b8e5; /* Change the color to #32b8e5 */
             transform: translate3d(0, 100%, 0);
             opacity: 0;
             animation: textAnimation 3s 1.5s forwards;
+            /* Add ocean waves animation */
+            animation: oceanWaves 2s linear infinite;
         }
 
         @keyframes counterAnimation {
@@ -59,8 +61,6 @@
             100% {
                 transform: translate3d(0, 0, 0);
                 opacity: 1;
-                /* Add ocean waves animation */
-                animation: oceanWaves 2s linear infinite;
             }
         }
 
