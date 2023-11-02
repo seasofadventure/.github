@@ -13,6 +13,8 @@
             padding: 0;
             overflow: hidden;
             background-color: #000;
+            color: #ffaf46;
+            font-family: Arial, sans-serif;
         }
 
         .container {
@@ -20,58 +22,50 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            text-align: center;
         }
 
         .counter {
             font-size: 60px;
             text-transform: uppercase;
-            color: #ffaf46;
-        }
-
-        .counter, .text {
-            animation: slideIn 3s linear;
-        }
-
-        .counter {
-            animation-iteration-count: infinite;
+            transform: translate3d(0, -100%, 0);
+            opacity: 0;
+            animation: counterAnimation 3s 0.5s forwards;
         }
 
         .text {
             font-size: 30px;
-            color: #ffaf46;
-            margin-top: 30px;
+            transform: translate3d(0, 100%, 0);
+            opacity: 0;
+            animation: textAnimation 3s 1.5s forwards;
         }
 
-        @keyframes slideIn {
+        @keyframes counterAnimation {
             0% {
-                transform: translateX(-200px);
+                transform: translate3d(0, -100%, 0);
                 opacity: 0;
             }
             100% {
-                transform: translateX(0);
+                transform: translate3d(0, 0, 0);
                 opacity: 1;
             }
         }
 
-        .countdown {
-            animation: countup 3s;
-            animation-timing-function: steps(402, end);
-            animation-iteration-count: 1;
-        }
-
-        @keyframes countup {
-            from {
-                content: "001";
+        @keyframes textAnimation {
+            0% {
+                transform: translate3d(0, 100%, 0);
+                opacity: 0;
             }
-            to {
-                content: "404";
+            100% {
+                transform: translate3d(0, 0, 0);
+                opacity: 1;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="counter countdown">404</div>
+        <div class="counter">404</div>
         <div class="text">Page Not Found</div>
     </div>
 </body>
